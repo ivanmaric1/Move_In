@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 204, 240, 0.4)), to(rgba(204, 191, 122, 0.4)));
+  background-image: linear-gradient(to right, rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
+  font-family: "Montserrat";
+}
+
+.text-center {
+  text-align: center;
+}
+
+:root {
+  --primary-color: #8DC9CA;
+  --secondary-color: rgb(236, 77, 104);
+  --header-color: #597F80;
+}
+
+.container {
+  height: 85vh;
+  max-width: 83%;
+  margin: 70px auto 0 auto;
+  background-color: var(--primary-color);
+  background-image: url(/img/naslovna.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  -webkit-box-shadow: 0px 0px 10px 5px var(--header-color);
+          box-shadow: 0px 0px 10px 5px var(--header-color);
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 1.5rem;
+  background-color: var(--header-color);
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.main {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 4rem;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.main__onama, .main__naruci {
+  width: 400px;
+}
+
+.main__naruci {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-usluge {
+  background-image: none;
+}
+
+.main-usluge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.izbornik {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.izbornik__stavka--link {
+  text-decoration: none;
+  padding: 1rem 3rem;
+  position: relative;
+  width: 150px;
+  z-index: 10;
+}
+
+.izbornik__stavka--link:link, .izbornik__stavka--link:visited, .izbornik__stavka--link:hover {
+  color: black;
+}
+
+.izbornik__stavka--link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 5%;
+  background-color: var(--secondary-color);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
+  transition: height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
+  transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+  transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s, -webkit-transform 0.2s;
+  z-index: -2;
+}
+
+.izbornik__stavka--link:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  height: 100%;
+}
+
+.izbornik__stavka--link:active::before {
+  background-color: var(--secondary-color);
+}
+
+.logo {
+  height: 100px;
+}
+
+.btn:link, .btn:visited {
+  margin: 1rem auto;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 1.45rem;
+  background-color: var(--secondary-color);
+  padding: 2rem 4rem;
+  border-radius: 100px;
+  position: relative;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0px 20px 10px lightslategray;
+          box-shadow: 0px 20px 10px lightslategray;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.btn:active {
+  -webkit-box-shadow: 0px 10px 5px lightslategray;
+          box-shadow: 0px 10px 5px lightslategray;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 100px;
+  background-color: var(--secondary-color);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.btn:hover::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 0;
+}
+
+.card {
+  position: relative;
+  height: 470px;
+  width: 230px;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card__side {
+  color: lightskyblue;
+  font-size: 1.5rem;
+  height: 470px;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0 1.5rem 2rem gray;
+          box-shadow: 0 1.5rem 2rem gray;
+}
+
+.card__side p {
+  display: block;
+  text-align: center;
+}
+
+.card__side-front {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 204, 240, 0.4)), to(rgba(204, 191, 122, 0.4)));
+  background-image: linear-gradient(to bottom, rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
+  color: white;
+}
+
+.card__side-back {
+  background-color: var(--primary-color);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  color: white;
+}
+
+.card:hover .card__side-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card__side-back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.naslov-kartice {
+  color: var(--secondary-color);
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=main.css.map */

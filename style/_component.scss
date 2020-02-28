@@ -1,0 +1,151 @@
+.izbornik {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    font-weight: 800;
+    
+    
+    &__stavka {
+       
+
+       &--link {
+           text-decoration: none;
+           padding: 1rem 3rem;
+           position: relative;
+           width: 150px;
+           z-index: 10;
+
+           &:link, &:visited, &:hover {
+               color: black;
+           }
+
+
+           &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            border-radius: 5%;
+            background-color: var(--secondary-color);
+            transform: scaleX(0);
+            transition: transform .2s, 
+                        height .4s cubic-bezier(1,0,0,1) .2s,
+                        background-color .1s;
+                        z-index: -2;
+            }
+
+            &:hover::before{
+                transform: scaleX(1);
+                height: 100%;
+            }
+        
+            &:active::before {
+                background-color: var(--secondary-color);
+            }
+       }
+
+
+    }
+}
+
+.logo {
+    height: 100px;
+}
+
+.btn {
+    &:link, &:visited {
+        margin: 1rem auto;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-weight: 800;
+        font-size: 1.45rem;
+        background-color: var(--secondary-color);
+        padding: 2rem 4rem;
+        border-radius: 100px;
+        position: relative;
+    }
+
+    &:hover {
+        box-shadow: 0px 20px 10px lightslategray;
+    transform: translateY(-3px);
+    }
+
+    &:active {
+        box-shadow: 0px 10px 5px lightslategray;
+        transform: translateY(-1px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 100px;
+        background-color: var(--secondary-color);
+        transition: all .5s;
+    }
+
+    &:hover::after {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.card {
+    position: relative;
+    height: 470px;
+    width: 230px;
+    perspective: 1500px;
+    margin: 0 auto;    
+    padding: 2rem;
+
+    &__side {
+        color: lightskyblue;
+        font-size: 1.5rem;
+        height: 470px;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 2rem gray;
+
+        p {
+            display: block;
+            text-align: center;
+        }
+
+        &-front {
+            background-image: linear-gradient(to bottom,rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
+            color: white;
+        }
+
+        &-back {
+            background-color: var(--primary-color);
+            transform: rotateY(180deg);
+            color: white;
+        }
+    }
+
+    &:hover &__side-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side-back {
+        transform: rotateY(0deg);
+    }
+}
+
+.naslov-kartice {
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 1.6rem;
+}
