@@ -68,6 +68,7 @@ body {
 
 .container-usluge {
   background-image: none;
+  height: auto;
 }
 
 .main-usluge {
@@ -78,6 +79,28 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-top: 100px;
+}
+
+.vozilo {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.vozilo img {
+  height: 500px;
+  margin-bottom: 1rem;
+}
+
+.vozilo p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 13%;
+  padding: 1rem;
 }
 
 .izbornik {
@@ -185,7 +208,7 @@ body {
 
 .card {
   position: relative;
-  height: 470px;
+  height: 540px;
   width: 230px;
   -webkit-perspective: 1500px;
           perspective: 1500px;
@@ -196,7 +219,7 @@ body {
 .card__side {
   color: lightskyblue;
   font-size: 1.5rem;
-  height: 470px;
+  height: 540px;
   -webkit-transition: all .8s ease;
   transition: all .8s ease;
   position: absolute;

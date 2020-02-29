@@ -38,6 +38,7 @@
 
 .container-usluge {
     background-image: none;
+    height: auto;
 }
 
 .main-usluge {
@@ -45,3 +46,26 @@
     justify-content: space-evenly;
     margin-top: 100px;
 }
+
+.vozilo {
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 3rem;
+   
+
+    img {
+        height: 500px;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 13%;
+        padding: 1rem;
+    }
+
+}
+
