@@ -38,24 +38,27 @@
 
 .container-usluge {
     background-image: none;
+    background-color: var(--primary-color);
     height: auto;
 }
 
 .main-usluge {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .vozilo {
     background-color: #fff;
     display: flex;
     margin-bottom: 3rem;
+    border-radius: 1rem;
    
 
     img {
-        height: 500px;
+        height: 400px;
         margin-bottom: 1rem;
+        border-top-left-radius: 1rem;
     }
 
     p {
@@ -66,6 +69,45 @@
         margin-top: 13%;
         padding: 1rem;
     }
-
 }
 
+.reference {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    margin: 1rem auto;
+   
+
+    .recenzija {
+        display: flex;
+        background-color: #fff;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        height: 300px;
+        align-items: center;
+
+        img {
+            
+            height: 80%;
+            margin-left: 1rem;
+            justify-self: center;
+        }
+
+        p {
+            width: 50%;
+            justify-self: flex-start;
+        }
+    }
+}
+
+.container-voznipark {
+    background-image: none;
+    height: auto;
+    padding-bottom: 1rem;
+
+    .vozilo {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}

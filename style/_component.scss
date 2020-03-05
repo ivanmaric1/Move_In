@@ -101,14 +101,14 @@
 .card {
     position: relative;
     height: 540px;
-    width: 230px;
+    width: 250px;
     perspective: 1500px;
     margin: 0 auto;    
     padding: 2rem;
 
     &__side {
         color: lightskyblue;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         height: 540px;
         transition: all .8s ease;
         position: absolute;
@@ -124,14 +124,16 @@
         }
 
         &-front {
-            background-image: linear-gradient(to bottom,rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
-            color: white;
+            background-color: #BFDCFF;
+            color: black;
+            padding: .2rem;
         }
 
         &-back {
-            background-color: var(--primary-color);
+            background-color: #D6BC8B;
             transform: rotateY(180deg);
-            color: white;
+            color: black;
+            padding: .5rem;
         }
     }
 

@@ -68,6 +68,7 @@ body {
 
 .container-usluge {
   background-image: none;
+  background-color: var(--primary-color);
   height: auto;
 }
 
@@ -78,7 +79,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .vozilo {
@@ -87,11 +88,13 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3rem;
+  border-radius: 1rem;
 }
 
 .vozilo img {
-  height: 500px;
+  height: 400px;
   margin-bottom: 1rem;
+  border-top-left-radius: 1rem;
 }
 
 .vozilo p {
@@ -101,6 +104,57 @@ body {
   text-align: center;
   margin-top: 13%;
   padding: 1rem;
+}
+
+.reference {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.reference .recenzija {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  height: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reference .recenzija img {
+  height: 80%;
+  margin-left: 1rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.reference .recenzija p {
+  width: 50%;
+  justify-self: flex-start;
+}
+
+.container-voznipark {
+  background-image: none;
+  height: auto;
+  padding-bottom: 1rem;
+}
+
+.container-voznipark .vozilo {
+  width: 90%;
+  margin: 1rem auto;
 }
 
 .izbornik {
@@ -209,7 +263,7 @@ body {
 .card {
   position: relative;
   height: 540px;
-  width: 230px;
+  width: 250px;
   -webkit-perspective: 1500px;
           perspective: 1500px;
   margin: 0 auto;
@@ -218,7 +272,7 @@ body {
 
 .card__side {
   color: lightskyblue;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   height: 540px;
   -webkit-transition: all .8s ease;
   transition: all .8s ease;
@@ -238,16 +292,17 @@ body {
 }
 
 .card__side-front {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 204, 240, 0.4)), to(rgba(204, 191, 122, 0.4)));
-  background-image: linear-gradient(to bottom, rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
-  color: white;
+  background-color: #BFDCFF;
+  color: black;
+  padding: .2rem;
 }
 
 .card__side-back {
-  background-color: var(--primary-color);
+  background-color: #D6BC8B;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  color: white;
+  color: black;
+  padding: .5rem;
 }
 
 .card:hover .card__side-front {
