@@ -127,9 +127,12 @@ body {
 }
 
 .reference .recenzija {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
   background-color: #fff;
   margin-bottom: 2rem;
   border-radius: 1rem;
@@ -140,6 +143,7 @@ body {
 }
 
 .reference .recenzija img {
+  grid-row: span 2;
   height: 80%;
   margin-left: 1rem;
   -ms-grid-column-align: center;
@@ -147,8 +151,14 @@ body {
 }
 
 .reference .recenzija p {
-  width: 50%;
+  font-size: 1.4rem;
+  width: 80%;
   justify-self: flex-start;
+}
+
+.reference .recenzija i {
+  font-size: 1.3rem;
+  font-weight: 900;
 }
 
 .container-voznipark {
@@ -364,9 +374,5 @@ body {
   color: var(--secondary-color);
   font-weight: 800;
   font-size: 1.6rem;
-}
-
-.btn-ponuda {
-  display: none;
 }
 /*# sourceMappingURL=main.css.map */
