@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-around;
     padding-top: 1.5rem;
-    background-color: var(--header-color);
+    background-color: #A3CBCC;
     border-bottom: 3px solid var(--secondary-color);
 }
 
@@ -48,11 +48,16 @@
     margin-top: 50px;
 }
 
+.popisUsluga {
+    text-align: center;
+}
+
 .vozilo {
     background-color: #fff;
     display: flex;
     margin-bottom: 3rem;
     border-radius: 1rem;
+    border-right: 3px solid var(--secondary-color);
    
 
     img {
@@ -109,5 +114,36 @@
     .vozilo {
         width: 90%;
         margin: 1rem auto;
+    }
+}
+
+.forma {
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat';
+    }
+
+    label, textarea,select {
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: 'Montserrat';
+    }
+
+    .katovi {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        margin-bottom: 2rem;
     }
 }

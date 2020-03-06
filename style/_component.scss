@@ -116,7 +116,7 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        box-shadow: 0 1.5rem 2rem gray;
+        box-shadow: 0 1rem 2rem gray;
 
         p {
             display: block;
@@ -124,13 +124,13 @@
         }
 
         &-front {
-            background-color: #BFDCFF;
+            background-color: #A3CBCC;
             color: black;
             padding: .2rem;
         }
 
         &-back {
-            background-color: #D6BC8B;
+            background-color: #A3CBCC;
             transform: rotateY(180deg);
             color: black;
             padding: .5rem;
@@ -150,4 +150,8 @@
     color: var(--secondary-color);
     font-weight: 800;
     font-size: 1.6rem;
+}
+
+.btn-ponuda {
+    display: none;
 }

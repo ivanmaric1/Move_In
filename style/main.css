@@ -2,7 +2,7 @@
 body {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 204, 240, 0.4)), to(rgba(204, 191, 122, 0.4)));
   background-image: linear-gradient(to right, rgba(255, 204, 240, 0.4), rgba(204, 191, 122, 0.4));
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
 
 .text-center {
@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --primary-color: #8DC9CA;
+  --primary-color: #ebeff1;
   --secondary-color: rgb(236, 77, 104);
   --header-color: #597F80;
 }
@@ -34,7 +34,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-top: 1.5rem;
-  background-color: var(--header-color);
+  background-color: #A3CBCC;
   border-bottom: 3px solid var(--secondary-color);
 }
 
@@ -82,6 +82,10 @@ body {
   margin-top: 50px;
 }
 
+.popisUsluga {
+  text-align: center;
+}
+
 .vozilo {
   background-color: #fff;
   display: -webkit-box;
@@ -89,6 +93,7 @@ body {
   display: flex;
   margin-bottom: 3rem;
   border-radius: 1rem;
+  border-right: 3px solid var(--secondary-color);
 }
 
 .vozilo img {
@@ -155,6 +160,46 @@ body {
 .container-voznipark .vozilo {
   width: 90%;
   margin: 1rem auto;
+}
+
+.forma {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.forma input {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat';
+}
+
+.forma label, .forma textarea, .forma select {
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: 'Montserrat';
+}
+
+.forma .katovi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.forma textarea {
+  margin-bottom: 2rem;
 }
 
 .izbornik {
@@ -282,8 +327,8 @@ body {
   width: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-box-shadow: 0 1.5rem 2rem gray;
-          box-shadow: 0 1.5rem 2rem gray;
+  -webkit-box-shadow: 0 1rem 2rem gray;
+          box-shadow: 0 1rem 2rem gray;
 }
 
 .card__side p {
@@ -292,13 +337,13 @@ body {
 }
 
 .card__side-front {
-  background-color: #BFDCFF;
+  background-color: #A3CBCC;
   color: black;
   padding: .2rem;
 }
 
 .card__side-back {
-  background-color: #D6BC8B;
+  background-color: #A3CBCC;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   color: black;
@@ -319,5 +364,9 @@ body {
   color: var(--secondary-color);
   font-weight: 800;
   font-size: 1.6rem;
+}
+
+.btn-ponuda {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
